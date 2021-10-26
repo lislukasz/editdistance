@@ -2,12 +2,12 @@
 
 Testing set size: 32768 chars
 
-### Glossary:
+## Glossary:
 
 * Apache: org.apache.commons:commons-text:1.9
 * Standford: edu.stanford.nlp:stanford-corenlp:4.3.1
 
-### Full testing set:
+## Full testing set:
 
 #### Apache:
 
@@ -18,7 +18,7 @@ Testing set size: 32768 chars
 
 * Issue: java.lang.OutOfMemoryError: Java heap space
 
-### Half testing set:
+## Half testing set:
 
 #### Apache:
 
@@ -29,7 +29,7 @@ Testing set size: 32768 chars
 
 * Issue: java.lang.OutOfMemoryError: Java heap space
 
-### 1000 chars testing set:
+## 1000 chars testing set:
 
 #### Apache:
 
@@ -41,7 +41,7 @@ Testing set size: 32768 chars
 * Duration: 58 412 000
 * Distance: 886.0
 
-### Maximum possible testing set:
+## Maximum possible testing set:
 
 #### Apache:
 
@@ -53,7 +53,7 @@ Testing set size: 32768 chars
 * Duration: 361 277 000
 * Distance: 7041.0
 
-### Conclusion
+## Conclusion
 
 #### Apache:
 
