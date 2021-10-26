@@ -87,6 +87,26 @@ class CompareCalculation {
     }
 
     @Test
+    void compareMaximumPossibleSetSize() throws URISyntaxException, IOException {
+        var fileAsString1 = readFileFromResource("file_1.txt").substring(0, 8000);
+        var fileAsString2 = readFileFromResource("file_2.txt").substring(0, 8000);
+
+        System.out.println("Apache way...");
+        LevenshteinDistance levenshteinDistance = LevenshteinDistance.getDefaultInstance();
+        resetStartTime();
+        Integer apply = levenshteinDistance.apply(fileAsString1, fileAsString2);
+        System.out.println("Duration = " + stopTime());
+        System.out.println("Result = " + apply);
+
+        System.out.println("Standford way...");
+        EditDistance editDistance = new EditDistance();
+        resetStartTime();
+        double score = editDistance.score(fileAsString1, fileAsString2);
+        System.out.println("Duration = " + stopTime());
+        System.out.println("Result = " + score);
+    }
+
+    @Test
     void runStandfordWithOwnWeights() throws URISyntaxException, IOException {
         var fileAsString1 = readFileFromResource("file_1.txt").substring(0, 1000);
         var fileAsString2 = readFileFromResource("file_2.txt").substring(0, 1000);
